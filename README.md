@@ -1,4 +1,5 @@
 ### Final code for the project *learning_log* of Chapters 18-20 from the book: _PYTHON CRASH COURSE 3<sup>rd</sup> EDITION: A Hands-On, Project-Based Introduction to Programming_ by _Eric Matthes_    
+Link to the [book repo](https://github.com/Shreehar-KE/book-python-crash-course/)
 <br/>
 
 Screenshot:
@@ -14,7 +15,7 @@ Note:
 Additional Features
 - Removed help text in the __Registration__ page.
 - Restriction of __register__, __login__ & __logout__ pages as per the user's authentication.
-  - This is prevent a scenario like: Logged in user trying the access the __register__ or __login__ url.
+  - This is to prevent a scenario like: Logged-in user trying the access the __register__ or __login__ url.
   - This is implemented using custom middleware in the `accounts` app.
 - New `edit-blog` feature to edit a blog's title & visibility.
 - Conditional Display of `create-post`, `edit-post` & `edit-blog` links in __blog__ page based on the user's authentication.
@@ -23,7 +24,7 @@ Additional Features
 <br/>
 
 How to run this project:
-1. Create a new virtual environment with packages mentioned in [requirements.txt](requirements.txt) and activate it.
+1. Create a new virtual environment with the packages mentioned in [requirements.txt](requirements.txt) and activate it.
 2. Run `python manage.py migrate` to create a new `db.sqlite3`.
 3. Run `python manage.py createsuperuser` to create a new admin user.
    1. Enter username, email & password(won't be displayed)
