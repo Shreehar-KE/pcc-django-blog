@@ -1,9 +1,10 @@
-### Final code for the project *learning_log* of Chapter 18-20 from the book: _PYTHON CRASH COURSE 3<sup>rd</sup> EDITION: A Hands-On, Project-Based Introduction to Programming_ by _Eric Matthes_
-
+### Final code for the project *learning_log* of Chapters 18-20 from the book: _PYTHON CRASH COURSE 3<sup>rd</sup> EDITION: A Hands-On, Project-Based Introduction to Programming_ by _Eric Matthes_   
+  
+  
 Note: 
 - This code is for local use only and has no configurations for cloud deployment.
-- This has few additional features(refer below) which are not mentioned in the book.
-
+- This has few additional features(refer below) which are not mentioned in the book.   
+  
 
 Additional Features
 - Removed help text in the __Registration__ page.
@@ -13,6 +14,7 @@ Additional Features
 - New `edit-blog` feature to edit a blog's title & visibility.
 - Conditional Display of `create-post`, `edit-post` & `edit-blog` links in __blog__ page based on the user's authentication.
 - __Recent Posts__ section in the Home page.
+
 
 
 How to run this project:
