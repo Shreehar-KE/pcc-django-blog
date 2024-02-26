@@ -1,0 +1,47 @@
+{% extends 'blogs/base.html' %}
+
+{% block page_header %}
+<h1>Blogs</h1>
+{% endblock page_header %}
+
+{% block content %}
+
+{% if request.user.is_authenticated %}
+<h5 class="card-header">Your Public Blogs:</h5>
+<ul class="list-group border-bottom pb-2 mb-4">
+  {% for blog in owner_blogs %}
+  <li class="list-group-item border-0">
+    <a href="{% url 'blogs:blog' blog.id %}">
+      {{ blog.name }}</a>
+  </li>
+  {% empty %}
+  <li class="list-group-item border-0">No blogs have been added yet.</li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% if private_blogs %}
+<h5 class="card-header">You Private Blogs:</h5>
+<ul class="list-group border-bottom pb-2 mb-4">
+  {% for blog in private_blogs %}
+  <li class="list-group-item border-0">
+    <a href="{% url 'blogs:blog' blog.id %}">
+      {{ blog.name }}</a>
+  </li>
+  {% empty %}
+  <li class="list-group-item border-0">No blogs have been added yet.</li>
+  {% endfor %}
+</ul>
+{% endif %}
+<h5 class="card-header">Public Blogs:</h5>
+<ul class="list-group border-bottom pb-2 mb-4">
+  {% for blog in public_blogs %}
+  <li class="list-group-item border-0">
+    <a href="{% url 'blogs:blog' blog.id %}">
+      {{ blog.name }}</a>
+  </li>
+  {% empty %}
+  <li class="list-group-item border-0">No blogs have been added yet.</li>
+  {% endfor %}
+</ul>
+<a href="{% url 'blogs:new_blog' %}">Create a new Blog</a>
+{% endblock content %}

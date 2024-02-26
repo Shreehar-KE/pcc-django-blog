@@ -1,0 +1,40 @@
+{% extends 'blogs/base.html' %}
+
+{% block page_header %}
+<h1>{{ blog.name }}</h1>
+{% if not blog.visibility %}
+<p>This blog is private, want to <a href="{% url 'blogs:edit_blog' blog.id%}">edit</a>?</p>
+
+{% elif not request.user.is_authenticated or request.user == blog.owner%}
+<a href="{% url 'blogs:edit_blog' blog.id%}">Edit Blog</a>
+
+{% endif %}
+{% endblock page_header %}
+
+{% block content %}
+{% if not request.user.is_authenticated or request.user == blog.owner%}
+<p>
+  <a href="{% url 'blogs:new_post' blog.id%}">Create a new post</a>
+</p>
+{% endif %}
+{% for post in posts %}
+<div class="card mb-3">
+  <!-- Card header with timestamp and edit link -->
+  <h4 class="card-header pb-0 pt-3">
+    <p>{{ post.title }}
+      {% if not request.user.is_authenticated or request.user == blog.owner%}
+      - <small><a href="{% url 'blogs:edit_post' post.id%}">edit post</a></small>
+      {% endif %}
+    </p>
+  </h4>
+  <!-- Card body with entry text -->
+  <div class="card-body pb-1" style="text-align: justify;">
+    {{ post.content|linebreaks }}
+    <hr>
+    <p><b>by {{post.blog.owner}}</b>, <small><i>posted on {{ post.date_added|date:'M d, Y - H:i' }}</i></small></p>
+  </div>
+</div>
+{% empty %}
+<p>No posts have been added to this blog yet.</p>
+{% endfor %}
+{% endblock content %}
