@@ -29,7 +29,25 @@ How to run this project:
 3. Run `python manage.py createsuperuser` to create a new admin user.
    1. Enter username, email & password(won't be displayed)
 4. Run `python manage.py runserver` to run the project.
-5. Visit the  url shown in the terminal
+5. Visit the url shown in the terminal
    1. For Ex. `https://127.0.0.1:8000/`
 6. To access the admin dashboard, visit the `/admin` subpage.
    1. For Ex. `https://127.0.0.1:8000/admin`
+
+<br/>
+
+Learning Outcomes:
+- Basic MVT architecture of Django
+- Function based Views
+- Forms in Django
+- Basic Auth Functionality using Django
+- Template Inheritance in Django
+- Applying Bootstrap5 styling in Django
+- Custom Middlewares in Django
+
+<br/>
+
+Languages used : python3,html
+Frameworks used : django
+Libraries used : django-bootstrap5
+Tech Domain : Full-Stack-Development
