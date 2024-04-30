@@ -47,7 +47,7 @@ Learning Outcomes:
 
 <br/>
 
-- Languages used : python3,html
+- Languages used : python3, html
 - Frameworks used : django
 - Libraries used : django-bootstrap5
 - Tech Domain : Full-Stack-Development
