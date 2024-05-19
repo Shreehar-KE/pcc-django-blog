@@ -1,4 +1,4 @@
-### Final code for the project *learning_log* of Chapters 18-20 from the book: _PYTHON CRASH COURSE 3<sup>rd</sup> EDITION: A Hands-On, Project-Based Introduction to Programming_ by _Eric Matthes_    
+### Final code for the project *learning_log* of Chapters 18-20 from the book: _PYTHON CRASH COURSE 3<sup>rd</sup> EDITION: A Hands-On, Project-Based Introduction to Programming_ by _Eric Matthes_.
 Link to the [book's solutions repo](https://github.com/Shreehar-KE/book-python-crash-course/)
 <br/>
 
